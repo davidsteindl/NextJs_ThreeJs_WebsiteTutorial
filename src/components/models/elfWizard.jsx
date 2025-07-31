@@ -8,17 +8,31 @@ Source: https://sketchfab.com/3d-models/elf-wizard-ca5564a738174feca82c9d89610c0
 Title: Elf Wizard
 */
 "use client"
-import React from 'react'
-import { useGraph } from '@react-three/fiber'
+import React, { useRef } from 'react'
+import { useFrame, useGraph } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
 
-export default function Model(props) {
-  const { scene } = useGLTF('/scene-transformed.glb')
+export default function ElfWizard(props) {
+  const { scene } = useGLTF('/models/elfWizard-transformed.glb')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
+
+  const modelRef = useRef()
+
+  useFrame((state, delta, xrFrame) => {
+    // console.log(state.clock)
+    modelRef.current.position.y= -2 + Math.sin(state.clock.elapsedTime)*0.15;
+    modelRef.current.rotation.y= -0.15 + Math.sin(state.clock.elapsedTime)*0.07;
+  })
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null}
+    ref= {modelRef}
+    position= {[0,-2,0]}
+    scale= {[5,5,5]}
+    rotation= {[0.05,-0.15,0]}
+    >
       <primitive object={nodes._rootJoint} />
       <mesh geometry={nodes.polySurface3_lambert1_0.geometry} material={materials.lambert1} scale={0.01} />
       <mesh geometry={nodes.subtool215_low_mat_staf_0.geometry} material={materials.mat_staf} position={[0.114, 0.225, 0.135]} rotation={[0.281, -0.167, 0.825]} scale={0.01} />
@@ -62,4 +76,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/scene-transformed.glb')
+useGLTF.preload('/models/elfWizard-transformed.glb')
