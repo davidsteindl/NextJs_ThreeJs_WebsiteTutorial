@@ -92,6 +92,12 @@ export const projectsData = [
 export const BtnList = [
   { label: "Home", link: "/", icon: "home", newTab: false },
   { label: "About", link: "/about", icon: "about", newTab: false },
+  {
+    label: "Resume",
+    link: "/CV_David_Steindl.pdf",
+    icon: "resume",
+    newTab: true,
+  },
   { label: "Projects", link: "/projects", icon: "projects", newTab: false },
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
@@ -107,11 +113,12 @@ export const BtnList = [
     newTab: true,
   },
   {
-    label: "Resume",
-    link: "/CV_David_Steindl.pdf",
-    icon: "resume",
+    label: "Instagram",
+    link: "https://www.instagram.com/_.steindl._/",
+    icon: "instagram",
     newTab: true,
   },
+
 ];
 
 
