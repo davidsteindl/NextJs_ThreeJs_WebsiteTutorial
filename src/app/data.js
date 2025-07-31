@@ -96,25 +96,19 @@ export const BtnList = [
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
     label: "Github",
-    link: "https://www.github.com/codebucks27",
+    link: "https://github.com/davidsteindl",
     icon: "github",
     newTab: true,
   },
   {
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/codebucks",
+    link: "https://www.linkedin.com/in/david-steindl/",
     icon: "linkedin",
     newTab: true,
   },
   {
-    label: "X",
-    link: "https://www.x.com/code_bucks",
-    icon: "twitter",
-    newTab: true,
-  },
-  {
     label: "Resume",
-    link: "/resume.pdf",
+    link: "/CV_David_Steindl.pdf",
     icon: "resume",
     newTab: true,
   },
