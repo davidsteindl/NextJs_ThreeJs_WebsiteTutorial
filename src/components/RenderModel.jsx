@@ -1,13 +1,18 @@
-import React from 'react'
+"use client"
+import { Environment } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import clsx from 'clsx'
+import React, { Suspense } from 'react'
 
-const RenderModel = (children, className) => {
+const RenderModel = ({children, className}) => {
   return (
     <Canvas
-    className={clsx("w-screen h-screen relative", className )}>
-        <Supense fallback= {null}>
+    className={clsx("w-screen h-screen  relative", className )}>
+        <Suspense  fallback= {null}>
             {children}
-        </Supense>
-    </Canvas>
+        </Suspense>
+        <Environment preset='city'/>
+   </Canvas>
   )
 }
 
