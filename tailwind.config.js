@@ -15,6 +15,10 @@ module.exports = {
       foreground: 'rgb(var(--foreground))',
       muted: 'rgb(var(--muted))',
       accent: 'rgb(var(--accent))',
+     },
+     boxShadow:{
+      'glass-inset': 'inset 0 17px 5px -9px rgba(243,246,244,0.05)',
+      'glass-sm': '5px 5px 20px 0px rgba(243,246,244,0.4)'
      }
     },
   },
