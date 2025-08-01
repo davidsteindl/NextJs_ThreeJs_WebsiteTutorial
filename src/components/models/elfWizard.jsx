@@ -29,7 +29,7 @@ export default function ElfWizard(props) {
   return (
     <group {...props} dispose={null}
     ref= {modelRef}
-    position= {[0.35,-1.7,0]}
+    position= {[0.15,-1.7,0]}
     scale= {[5,5,5]}
     rotation= {[0.05,-0.15,0]}
     >
