@@ -11,8 +11,8 @@ Title: Wizard's hat
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export default function Model(props) {
-  const { nodes, materials } = useGLTF('/scene-transformed.glb')
+export default function WizardHat(props) {
+  const { nodes, materials } = useGLTF('/models/wizardHat-transformed.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.defaultMaterial.geometry} material={materials.lambert21} />
@@ -20,4 +20,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/scene-transformed.glb')
+useGLTF.preload('/models/wizardHat-transformed.glb')
