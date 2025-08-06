@@ -114,7 +114,7 @@ export const BtnList = [
   },
   {
     label: "Instagram",
-    link: "https://www.instagram.com/_.steindl._/",
+    link: "https://www.instagram.com/",
     icon: "instagram",
     newTab: true,
   },
