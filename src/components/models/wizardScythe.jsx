@@ -9,7 +9,7 @@ Title: Darksiders: Scythe of Death
 */
 "use client"
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { Center, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export default function WizardScythe(props) {
@@ -17,17 +17,18 @@ export default function WizardScythe(props) {
   const modelRef = useRef();
 
   useFrame(() => {
-    modelRef.current.rotation.y +=0.008
-  
+    modelRef.current.rotation.y += 0.008
+
   })
   return (
     <group {...props} dispose={null}
-    ref= {modelRef}
-    scale={[0.3,0.45,0.3]}
-    position={[0.1,0.5,1]}
+      ref={modelRef}
+      scale={[0.3, 0.45, 0.3]}
+      position={[0, 0.2, 1]}
     >
-    
-      <mesh geometry={nodes.Object_3.geometry} material={materials.scythe_mat} position={[-3.554, -4.905, 0.361]} rotation={[-Math.PI / 2, 0, 0]} />
+      <Center>
+        <mesh geometry={nodes.Object_3.geometry} material={materials.scythe_mat} position={[-3.554, -4.905, 0.361]} rotation={[-Math.PI / 2, 0, 0]} />
+      </Center>
     </group>
   )
 }
