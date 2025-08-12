@@ -13,7 +13,7 @@ export default function Home() {
 
     <ProjectList projects= {projectsData} />
 
-   <div className='flex items-center justify-center fixed top-10 left-0 h-screen'>
+   <div className='flex items-center justify-center fixed top-20 -left-2 h-screen'>
       <RenderModel>
           <WizardScythe />
         </RenderModel>
