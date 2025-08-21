@@ -8,13 +8,26 @@ Source: https://sketchfab.com/3d-models/wizards-hat-68a9fb2dbd8442a5bacf9c014132
 Title: Wizard's hat
 */
 "use client"
-import React from 'react'
+import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber';
 
 export default function WizardHat(props) {
   const { nodes, materials } = useGLTF('/models/wizardHat-transformed.glb')
+
+  const modelRef = useRef();
+
+  useFrame(() => {
+    modelRef.current.rotation.y += 0.008
+
+  })
   return (
-    <group {...props} dispose={null}>
+    <group 
+    ref={modelRef}
+    {...props} dispose={null}
+      position={[0.2, 0.5, -1]}
+      scale={[1.7, 1.7, 1.4]}
+      rotation={[0.3, 4.2, 0.2]}>
       <mesh geometry={nodes.defaultMaterial.geometry} material={materials.lambert21} />
     </group>
   )
