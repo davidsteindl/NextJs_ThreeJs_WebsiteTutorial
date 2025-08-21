@@ -9,7 +9,7 @@ Title: Wizard's hat
 */
 "use client"
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { Center, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
 
 export default function WizardHat(props) {
@@ -25,10 +25,10 @@ export default function WizardHat(props) {
     <group 
     ref={modelRef}
     {...props} dispose={null}
-      position={[0.2, 0.5, -1]}
-      scale={[1.7, 1.7, 1.4]}
+      position={[-0.1, 0.5, -1]}
+      scale={[2.2, 2.2, 2]}
       rotation={[0.3, 4.2, 0.2]}>
-      <mesh geometry={nodes.defaultMaterial.geometry} material={materials.lambert21} />
+      <Center><mesh geometry={nodes.defaultMaterial.geometry} material={materials.lambert21} /></Center>
     </group>
   )
 }
