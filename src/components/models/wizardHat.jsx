@@ -25,7 +25,7 @@ export default function WizardHat(props) {
     <group 
     ref={modelRef}
     {...props} dispose={null}
-      position={[-0.1, 0.5, -1]}
+      position={[0, 0.5, -1]}
       scale={[2.2, 2.2, 2]}
       rotation={[0.3, 4.2, 0.2]}>
       <Center><mesh geometry={nodes.defaultMaterial.geometry} material={materials.lambert21} /></Center>

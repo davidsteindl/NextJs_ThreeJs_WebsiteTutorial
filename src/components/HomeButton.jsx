@@ -4,7 +4,7 @@ import React from 'react'
 
 const HomeButton = () => {
   return (
-    <Link href={"/"} target={'_self'} className='text-foreground rounded-full flex items-center justify-center
+    <Link href={"/"} target={'_self'} className='z-50 text-foreground rounded-full flex items-center justify-center
             custom-bg fixed top-4 left-4 w-fit self-start' aria-label={"home"} name={"home"}>
                 <span className='relative w-14 h-14 p-4 group-hover:text-accent'>
                    <Home className="w-full h-auto" strokeWidth={1.5}/>
