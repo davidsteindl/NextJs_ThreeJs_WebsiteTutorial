@@ -35,8 +35,8 @@ const AboutDetails = () => {
                         2+ <sub className="font-semibold text-base text-white">years of experience</sub>
                     </p>
                 </ItemLayout>
-                <ItemLayout className={"col-span-6"}>
-                    <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=davidsteindl" alt="GithubStats" loading="lazy" />
+                <ItemLayout className={"col-span-8"}>
+                    <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=davidsteindl&theme=transparent&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&hide_border=true&text_bold=false" alt="GithubStats" loading="lazy" />
                 </ItemLayout>
             </div>
         </section>
