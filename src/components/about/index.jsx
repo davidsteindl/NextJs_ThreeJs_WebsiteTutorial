@@ -55,9 +55,8 @@ const AboutDetails = () => {
                   <img className="w-full h-auto" src="https://github-readme-streak-stats.herokuapp.com?user=davidsteindl&hide_border=true&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B" alt="David Steindl" loading="lazy" />
                 </ItemLayout>
 
-                
-                <ItemLayout className={"col-span-full"}>
-                    <img className="w-full h-auto" src="https://skillicons.dev/icons?i=js,html,css,javascript,typescript,nodejs,npm,tailwind,bootstrap,angular,nextjs,react,java,python,git,github,gitlab,vscode,webstorm,figma" alt="David Steindl" loading="lazy" />
+           <ItemLayout className={"col-span-6"}>
+                    <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/pin/?username=davidsteindl&repo=SEPR2025" alt="GithubStats" loading="lazy" />
                 </ItemLayout>
             </div>
         </section>
