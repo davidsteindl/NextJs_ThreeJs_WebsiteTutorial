@@ -11,6 +11,7 @@ const AboutDetails = () => {
     return (
         <section className='py-20 w-full'>
             <div className='grid grid-cols-12 gap-8 w-full'>
+
                 <ItemLayout className={'col-span-8 row-span-2 flex-col items-start'}>
                     <h2 className="text-2xl text-left w-full capitalize">
                         Architect of Enchantment
@@ -24,25 +25,39 @@ const AboutDetails = () => {
                         technologies to shape the future of the web.
                     </p>
                 </ItemLayout>
+
                 <ItemLayout className={'col-span-4  text-accent'}>
                     <p className="font-semibold w-full text-left text-5xl">
                         5th semester<p></p> <sub className="font-semibold text-base text-white">in BSC of computer science</sub>
                     </p>
 
                 </ItemLayout>
+
                 <ItemLayout className={'col-span-4   text-accent'}>
                     <p className="font-semibold w-full text-left text-5xl">
                         2+ <sub className="font-semibold text-base text-white">years of experience</sub>
                     </p>
                 </ItemLayout>
-                 <ItemLayout className={"col-span-4"}>
+
+                <ItemLayout className={"col-span-4"}>
                     <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/top-langs?username=davidsteindl&theme=transparent&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&hide_border=true&text_bold=false" alt="GithubStats" loading="lazy" />
                 </ItemLayout>
+
                 <ItemLayout className={"col-span-8"}>
-                    <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=davidsteindl&theme=transparent&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&hide_border=true&text_bold=false" alt="GithubStats" loading="lazy" />
+                    <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=davidsteindl&theme=transparent&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&hide_border=true&text_bold=false" alt="David Steindl" loading="lazy" />
                 </ItemLayout>
-                 <ItemLayout className={"col-span-full"}>
-                    <img className="w-full h-auto" src="https://skillicons.dev/icons?i=js,html,css,javascript,typescript,nodejs,npm,tailwind,bootstrap,angular,nextjs,react,java,python,git,github,gitlab,vscode,webstorm,figma" alt="GithubStats" loading="lazy" />
+
+                <ItemLayout className={"col-span-full"}>
+                    <img className="w-full h-auto" src="https://skillicons.dev/icons?i=js,html,css,javascript,typescript,nodejs,npm,tailwind,bootstrap,angular,nextjs,react,java,python,git,github,gitlab,vscode,webstorm,figma" alt="David Steindl" loading="lazy" />
+                </ItemLayout>
+
+                <ItemLayout className={"col-span-6"}>
+                  <img className="w-full h-auto" src="https://github-readme-streak-stats.herokuapp.com?user=davidsteindl&hide_border=true&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B" alt="David Steindl" loading="lazy" />
+                </ItemLayout>
+
+                
+                <ItemLayout className={"col-span-full"}>
+                    <img className="w-full h-auto" src="https://skillicons.dev/icons?i=js,html,css,javascript,typescript,nodejs,npm,tailwind,bootstrap,angular,nextjs,react,java,python,git,github,gitlab,vscode,webstorm,figma" alt="David Steindl" loading="lazy" />
                 </ItemLayout>
             </div>
         </section>
