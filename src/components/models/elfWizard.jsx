@@ -22,14 +22,14 @@ export default function ElfWizard(props) {
 
   useFrame((state, delta, xrFrame) => {
     // console.log(state.clock)
-    modelRef.current.position.y= -2 + Math.sin(state.clock.elapsedTime)*0.15;
+    modelRef.current.position.y= -1.7 + Math.sin(state.clock.elapsedTime)*0.15;
     modelRef.current.rotation.y= -0.15 + Math.sin(state.clock.elapsedTime)*0.07;
   })
 
   return (
     <group {...props} dispose={null}
     ref= {modelRef}
-    position= {[0,-2,0]}
+    position= {[0.15,-1.7,0]}
     scale= {[5,5,5]}
     rotation= {[0.05,-0.15,0]}
     >

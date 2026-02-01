@@ -8,16 +8,29 @@ Source: https://sketchfab.com/3d-models/darksiders-scythe-of-death-f9f1f02511264
 Title: Darksiders: Scythe of Death
 */
 "use client"
-import React from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from 'react'
+import { Center, useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
 
-export default function Model(props) {
-  const { nodes, materials } = useGLTF('/scene-transformed.glb')
+export default function WizardScythe(props) {
+  const { nodes, materials } = useGLTF('/models/wizardScythe-transformed.glb')
+  const modelRef = useRef();
+
+  useFrame(() => {
+    modelRef.current.rotation.y += 0.008
+
+  })
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.Object_3.geometry} material={materials.scythe_mat} position={[-3.554, -4.905, 0.361]} rotation={[-Math.PI / 2, 0, 0]} />
+    <group {...props} dispose={null}
+      ref={modelRef}
+      scale={[0.3, 0.45, 0.3]}
+      position={[0, 0.2, 1]}
+    >
+      <Center>
+        <mesh geometry={nodes.Object_3.geometry} material={materials.scythe_mat} position={[-3.554, -4.905, 0.361]} rotation={[-Math.PI / 2, 0, 0]} />
+      </Center>
     </group>
   )
 }
 
-useGLTF.preload('/scene-transformed.glb')
+useGLTF.preload('/models/wizardScythe-transformed.glb')
