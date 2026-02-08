@@ -4,9 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: 'NextJs_ThreeJs_WebsiteTutorial',
-  assetPrefix: 'NextJs_ThreeJs_WebsiteTutorial',
+  basePath: '/NextJs_ThreeJs_WebsiteTutorial',
+  assetPrefix: '/NextJs_ThreeJs_WebsiteTutorial/',
 }
 
-module.exports = nextConfig
-export default nextConfig;
+export default nextConfig
