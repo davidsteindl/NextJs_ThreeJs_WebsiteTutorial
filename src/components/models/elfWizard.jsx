@@ -11,10 +11,11 @@ Title: Elf Wizard
 import React, { useRef } from 'react'
 import { useFrame, useGraph } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
+import { assetPath } from '@/lib/assetPath'
 import { SkeletonUtils } from 'three-stdlib'
 
 export default function ElfWizard(props) {
-  const { scene } = useGLTF('/models/elfWizard-transformed.glb')
+  const { scene } = useGLTF(assetPath('/models/elfWizard-transformed.glb'))
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
 
@@ -76,4 +77,4 @@ export default function ElfWizard(props) {
   )
 }
 
-useGLTF.preload('/models/elfWizard-transformed.glb')
+useGLTF.preload(assetPath('/models/elfWizard-transformed.glb'))

@@ -10,10 +10,11 @@ Title: Wizard's hat
 "use client"
 import React, { useRef } from 'react'
 import { Center, useGLTF } from '@react-three/drei'
+import { assetPath } from '@/lib/assetPath'
 import { useFrame } from '@react-three/fiber';
 
 export default function WizardHat(props) {
-  const { nodes, materials } = useGLTF('/models/wizardHat-transformed.glb')
+  const { nodes, materials } = useGLTF(assetPath('/models/wizardHat-transformed.glb'))
 
   const modelRef = useRef();
 
@@ -33,4 +34,4 @@ export default function WizardHat(props) {
   )
 }
 
-useGLTF.preload('/models/wizardHat-transformed.glb')
+useGLTF.preload(assetPath('/models/wizardHat-transformed.glb'))

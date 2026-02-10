@@ -10,10 +10,11 @@ Title: Darksiders: Scythe of Death
 "use client"
 import React, { useRef } from 'react'
 import { Center, useGLTF } from '@react-three/drei'
+import { assetPath } from '@/lib/assetPath'
 import { useFrame } from '@react-three/fiber'
 
 export default function WizardScythe(props) {
-  const { nodes, materials } = useGLTF('/models/wizardScythe-transformed.glb')
+  const { nodes, materials } = useGLTF(assetPath('/models/wizardScythe-transformed.glb'))
   const modelRef = useRef();
 
   useFrame(() => {
@@ -33,4 +34,4 @@ export default function WizardScythe(props) {
   )
 }
 
-useGLTF.preload('/models/wizardScythe-transformed.glb')
+useGLTF.preload(assetPath('/models/wizardScythe-transformed.glb'))

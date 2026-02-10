@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "deploy": "npm run build && powershell -Command \"Remove-Item -Recurse -Force docs -ErrorAction SilentlyContinue; Move-Item out docs; New-Item docs/.nojekyll -ItemType File -Force\"",
     "lint": "next lint"
   },
   "dependencies": {
