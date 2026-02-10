@@ -19,6 +19,7 @@ Tutorial and initial layout is by [codebucks27](https://github.com/codebucks27),
 - Responsive design
 
 ## Setup
-npm install <br>
+```bash
+npm install 
 npm run dev
 
