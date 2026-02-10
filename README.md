@@ -1,6 +1,6 @@
 # Personal Three.js & Next.s Portfolio Website Tutorial
 
-## Website Demo:
+## Website Demo on Github Pages
 [Website on Github Pages](https://davidsteindl.github.io/NextJs_ThreeJs_WebsiteTutorial/)
 
 ## Credits
